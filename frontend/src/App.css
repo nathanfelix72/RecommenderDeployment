@@ -1,81 +1,139 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 600px;
-  background: white;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #333;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-.button:hover {
-  background-color: #0056b3;
-}
-
-.recommendations {
-  margin-top: 1.5rem;
-  display: grid;
-  gap: 1rem;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
 .card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2em;
 }
 
-.card-title {
-  font-size: 1.2rem;
+.read-the-docs {
+  color: #888;
+}
+
+/* General container */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Title */
+.title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input group for dropdown & button */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Dropdown styling */
+select {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  background: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+select:hover,
+select:focus {
+  border-color: #646cff;
+}
+
+/* Button styling */
+.recommend-btn {
+  padding: 10px 15px;
+  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #444;
+  color: white;
+  background: linear-gradient(to right, #646cff, #8a85ff);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
 }
 
-.list {
-  list-style-type: none;
+.recommend-btn:hover {
+  background: linear-gradient(to right, #4a4eff, #6d69ff);
+  transform: scale(1.05);
+}
+
+/* Recommendations box */
+.recommendations {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* List styling */
+ul {
+  list-style: none;
   padding: 0;
 }
 
-.list-item {
-  font-size: 0.9rem;
-  padding: 5px 0;
-  color: #666;
+li {
+  padding: 12px;
+  font-size: 16px;
+  color: #555;
+  background: #fff;
+  border-radius: 6px;
+  margin: 5px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
